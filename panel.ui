@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>나눔스퀘어 Bold</family>
+    <pointsize>16</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>NEIS 바이트 계산기</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="inputbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>840</width>
+      <height>460</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔스퀘어 Bold</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>입력</string>
+    </property>
+    <widget class="QPlainTextEdit" name="inputtext">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>800</width>
+       <height>400</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>KoPubWorld바탕체 Medium</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="plainText">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>490</y>
+      <width>490</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="result" rowminimumheight="30,30" columnminimumwidth="100,100,150">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>5</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>5</number>
+     </property>
+     <property name="horizontalSpacing">
+      <number>20</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>10</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="t1">
+       <property name="text">
+        <string>공백 포함</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="t2">
+       <property name="text">
+        <string>공백 제외</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="t3">
+       <property name="text">
+        <string>바이트 수</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="v1">
+       <property name="text">
+        <string>0자</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="v2">
+       <property name="text">
+        <string>0자</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="v3">
+       <property name="text">
+        <string>0 바이트</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="buttonbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>490</y>
+      <width>330</width>
+      <height>135</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="loadbtn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>150</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;저장된 내용을 입력창으로 불러옵니다.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#7f0000;&quot;&gt;주의! 현재 입력창에 있는 내용은 모두 지워지며, 자동으로 저장되지 않습니다. 현재 내용이 있다면 다른 곳에 복사해두거나 저장한 다음 사용해 주십시오.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="toolTipDuration">
+      <number>60000</number>
+     </property>
+     <property name="text">
+      <string>불러오기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="savebtn">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>10</y>
+       <width>150</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>현재 입력창에 있는 내용을 텍스트 파일로 저장합니다. 파일은 프로그램과 같은 폴더에 저장됩니다.</string>
+     </property>
+     <property name="toolTipDuration">
+      <number>60000</number>
+     </property>
+     <property name="text">
+      <string>저장하기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="copybtn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>150</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>입력창의 모든 내용을 클립보드로 복사합니다. (Ctrl+A Ctrl+C)</string>
+     </property>
+     <property name="toolTipDuration">
+      <number>60000</number>
+     </property>
+     <property name="text">
+      <string>복사하기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pastebtn">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>50</y>
+       <width>150</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>클립보드에 있는 내용을 현재 커서 뒤에 붙여넣습니다. (Ctrl+A Ctrl+V)</string>
+     </property>
+     <property name="toolTipDuration">
+      <number>60000</number>
+     </property>
+     <property name="text">
+      <string>붙여넣기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="delbtn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>100</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;현재 입력창에 있는 모든 내용을 지웁니다. (Ctrl+A Delete)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#7f0000;&quot;&gt;주의! '지우기' 버튼을 누르면 이전의 기록이 모두 삭제되어, '되돌리기' 또는 Ctrl+Z를 해도 지우기 전으로 돌아갈 수 없습니다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="toolTipDuration">
+      <number>60000</number>
+     </property>
+     <property name="text">
+      <string>지우기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="undobtn">
+     <property name="geometry">
+      <rect>
+       <x>115</x>
+       <y>90</y>
+       <width>100</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>이전으로 되돌립니다. (Ctrl+Z)</string>
+     </property>
+     <property name="toolTipDuration">
+      <number>60000</number>
+     </property>
+     <property name="text">
+      <string>되돌리기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="redobtn">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>90</y>
+       <width>100</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>되돌리기 이전으로 다시 돌아갑니다. (Ctrl+Y 또는 Ctrl+Shift+Z)</string>
+     </property>
+     <property name="toolTipDuration">
+      <number>60000</number>
+     </property>
+     <property name="text">
+      <string>다시하기</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="statmsg">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>585</y>
+      <width>450</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>정상</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
